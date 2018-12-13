@@ -6,7 +6,7 @@ categories:
 ---
 
 <p><strong>Student1</strong></p>
-<pre><code>ublic class Student1 implements Comparable&lt;Student1&gt;{  
+<pre><code>public class Student1 implements Comparable&lt;Student1&gt;{  
     private String name;  
  private int kor;  
  private int eng;  
