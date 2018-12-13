@@ -5,7 +5,6 @@ categories:
 
 ---
 
-<--<h1 id="collections.sort-예제">Collections.sort() 예제</h1>-->
 <p><strong>Student1</strong></p>
 <pre><code>ublic class Student1 implements Comparable&lt;Student1&gt;{  
     private String name;  
