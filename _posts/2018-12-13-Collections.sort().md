@@ -1,5 +1,7 @@
 ---
-
+title: "Collections.sort()"
+date: 2018-12-13 -0400
+categories: jekyll update
 
 ---
 
