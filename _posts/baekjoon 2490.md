@@ -20,15 +20,15 @@
 
 ## 예제 입력 1 
 
-0 1 0 1
-1 1 1 0
-0 0 1 1
+0 1 0 1<br>
+1 1 1 0<br>
+0 0 1 1<br>
 
 ## 예제 출력 1 
 
-B
-A
-B
+B<br>
+A<br>
+B<br>
 
 ## 출처
 
@@ -79,6 +79,3 @@ public class Main {
     }
 }
 ```
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTY0MDU2MjIzM119
--->
