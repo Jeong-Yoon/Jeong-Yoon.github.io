@@ -171,3 +171,6 @@ class NewStudentMathComparator implements Comparator&lt;Student1&gt; {
 <li>국어, 영어, 수학 점수로 정렬 할 수 있도록 하기 위해 클래스를 만들고 compare메소드를 오버라이딩.</li>
 </ul>
 
+<!--stackedit_data:
+eyJoaXN0b3J5IjpbMTU4NTc0NTU5MF19
+-->
