@@ -5,8 +5,11 @@ categories:
 
 ---
 
-<p><strong>Student1</strong></p>
-<pre><code>public class Student1 implements Comparable&lt;Student1&gt;{  
+# Collections.sort() 예제
+
+**Student1**
+```java
+ublic class Student1 implements Comparable<Student1>{  
     private String name;  
  private int kor;  
  private int eng;  
@@ -91,9 +94,10 @@ categories:
         return name.compareTo(o.name);  
   }  
 }
-</code></pre>
-<p><strong>StudentExam1</strong></p>
-<pre><code>import java.util.ArrayList;  
+```
+**StudentExam1**
+```java
+import java.util.ArrayList;  
 import java.util.Collections;  
 import java.util.Comparator;  
 import java.util.List;  
@@ -104,7 +108,7 @@ public class StudentExam1 {
   Student1 s2 = new Student1("Jang", 85, 55, 90);  
   Student1 s3 = new Student1("Lee", 80, 50, 70);  
   
-  List&lt;Student1&gt; slist = new ArrayList&lt;&gt;();  
+  List<Student1> slist = new ArrayList<>();  
   slist.add(s1);  
   slist.add(s2);  
   slist.add(s3);  
@@ -145,32 +149,26 @@ public class StudentExam1 {
     }  
 }  
   
-class NewStudentKoreanComparator implements Comparator&lt;Student1&gt; {  
+class NewStudentKoreanComparator implements Comparator<Student1> {  
     @Override  
   public int compare(Student1 o1, Student1 o2) {  
         return o1.getKor() - o2.getKor();  
   }  
 }  
   
-class NewStudentEnglishComparator implements Comparator&lt;Student1&gt; {  
+class NewStudentEnglishComparator implements Comparator<Student1> {  
     @Override  
   public int compare(Student1 o1, Student1 o2) {  
         return o1.getEng() - o2.getEng();  
   }  
 }  
   
-class NewStudentMathComparator implements Comparator&lt;Student1&gt; {  
+class NewStudentMathComparator implements Comparator<Student1> {  
     @Override  
   public int compare(Student1 o1, Student1 o2) {  
         return o1.getMath() - o2.getMath();  
   }  
 }
-</code></pre>
-<ul>
-<li>기본적으로 name을 기준으로 정렬하도록 Student1 클래스에는 compareTo 메소드를 오버라이딩</li>
-<li>국어, 영어, 수학 점수로 정렬 할 수 있도록 하기 위해 클래스를 만들고 compare메소드를 오버라이딩.</li>
-</ul>
-
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4NTc0NTU5MF19
--->
+```
+- 기본적으로 name을 기준으로 정렬하도록 Student1 클래스에는 compareTo 메소드를 오버라이딩
+- 국어, 영어, 수학 점수로 정렬 할 수 있도록 하기 위해 클래스를 만들고 compare메소드를 오버라이딩.
