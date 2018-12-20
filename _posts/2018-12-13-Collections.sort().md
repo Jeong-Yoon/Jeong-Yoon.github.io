@@ -170,7 +170,6 @@ class NewStudentMathComparator implements Comparator<Student1> {
   }  
 }
 ```
-<h6>
+
 - 기본적으로 name을 기준으로 정렬하도록 Student1 클래스에는 compareTo 메소드를 오버라이딩
 - 국어, 영어, 수학 점수로 정렬 할 수 있도록 하기 위해 클래스를 만들고 compare메소드를 오버라이딩.
-    </h6>
