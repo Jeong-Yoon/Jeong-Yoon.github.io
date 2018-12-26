@@ -9,8 +9,8 @@ categories:
 
 **Student1**
 ```java
-ublic class Student1 implements Comparable<Student1>{  
-    private String name;  
+public class Student1 implements Comparable<Student1>{  
+ private String name;  
  private int kor;  
  private int eng;  
  private int math;  
