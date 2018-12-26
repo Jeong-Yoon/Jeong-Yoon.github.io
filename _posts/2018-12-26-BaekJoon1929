@@ -1,0 +1,76 @@
+# 소수 구하기  
+
+|시간제한| 메모리제한 |
+|:--:|:--:|
+| 2초 |  256MB|
+ 
+### 문제
+<span
+style=" 
+font-size: 10pt;
+">M이상 N이하의 소수를 모두 출력하는 프로그램을 작성하시오.</span>
+
+### 입력
+<span
+style=" 
+font-size: 10pt;
+">첫째 줄에 자연수 M과 N이 빈 칸을 사이에 두고 주어진다. (1 ≤ M ≤ N ≤ 1,000,000)</span>
+
+### 출력
+<span
+style=" 
+font-size: 10pt;
+">한 줄에 하나씩, 증가하는 순서대로 소수를 출력한다.</span>
+
+### 예제 입력 
+<span
+style=" 
+font-size: 10pt;
+">3  16</span>
+
+### 예제 출력 
+<span
+style=" 
+font-size: 10pt;
+">
+3<br>
+5<br>
+7<br>
+11<br>
+13<br></span>
+
+```java
+import java.util.ArrayList;  
+import java.util.Scanner;  
+  
+public class Problem1929 {  
+    public static void main(String args[]){  
+        Scanner scanner = new Scanner(System.in);  
+ int M = scanner.nextInt();  
+ int N = scanner.nextInt();  
+  
+  ArrayList<Boolean> primeList = new ArrayList<Boolean>(N+1);  
+  primeList.add(false);  
+  primeList.add(false);  
+ for (int i = 2; i <= N; i++){  
+            primeList.add(i, true);  
+  }  
+        for (int i = 2; i * i <= N; i++){  
+            if (primeList.get(i)){  
+                for (int j = i*i; j <= N; j += i){  
+                    primeList.set(j,false);  
+  }  
+            }  
+        }  
+        for (int i = M; i <= N; i++){  
+            if (primeList.get(i)){  
+                System.out.println(i);  
+  }  
+        }  
+    }  
+}
+```
+<span
+style=" 
+font-size: 10pt;
+">다른 사람들이 작성한 코드에서는 Math.sqrt() 함수를 이용해서 제곱근을 사용하였다.  제곱근을 활용하는 방법으로 다시 작성해보자.</span>
