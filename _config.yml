@@ -36,4 +36,5 @@ defaults:
 # no_google_fonts:     true
 
 sass:
-  sass_dir: stylesheet
+  sass_dir: _sass
+  style: compressed
