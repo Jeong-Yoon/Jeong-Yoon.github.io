@@ -34,3 +34,7 @@
   padding-left: 3.8rem;
 }
 /* end Markdown styles */
+.sans-serif {
+    font-family: 'Nanum Gothic', sans-serif;
+font-family: 'Noto Sans', sans-serif;
+}
