@@ -1,7 +1,7 @@
 # ----------- CONFIGURABLE START -----------
 title:            "Jeong-Yoon"
 description:      "-"
-url:              http://Jeong-Yoon.github.io # Site url, without a slash at the end.
+url:              "http://Jeong-Yoon.github.io" # Site url, without a slash at the end.
 signoff:          "Jeong-Yoon" # Your name
 facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
 google_analytics: # Set tracking, remove from /javascripts/basic.js if unwanted.
@@ -20,3 +20,5 @@ permalink:        /posts/:title
 defaults:
   - values:
       layout: "default"
+
+baseurl: "/Jeong-Yoon.github.io"
