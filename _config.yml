@@ -1,7 +1,8 @@
 # ----------- CONFIGURABLE START -----------
 title:            "Jeong-Yoon"
 description:      "-"
-url:              "http://Jeong-Yoon.github.io" # Site url, without a slash at the end.
+url:              "https://Jeong-Yoon.github.io" # Site url, without a slash at the end. # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
+baseurl:          ""
 signoff:          "Jeong-Yoon" # Your name
 facebook_appid:   # APP ID for like button, remove from /_includes/share.html if unwanted.
 google_analytics: # Set tracking, remove from /javascripts/basic.js if unwanted.
@@ -21,4 +22,4 @@ defaults:
   - values:
       layout: "default"
 
-baseurl: "/Jeong-Yoon.github.io"
+
