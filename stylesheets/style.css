@@ -1,5 +1,6 @@
 @import "https://unpkg.com/tachyons@4.6.1/css/tachyons.min.css";
-@import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Noto+Sans&subset=korean');
+@import "https://fonts.googleapis.com/css?family=Nanum+Gothic|Noto+Sans&subset=korean";
+/* @import url('https://fonts.googleapis.com/css?family=Nanum+Gothic|Noto+Sans&subset=korean'); */
 
 .bg-super-white { background: #f9f9f9; }
 .top-50 { top: 50% }
