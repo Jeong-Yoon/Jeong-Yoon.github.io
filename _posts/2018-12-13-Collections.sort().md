@@ -174,7 +174,7 @@ class NewStudentMathComparator implements Comparator<Student1> {
 - <span
 style=" 
 font-size: 10pt;
-">기본적으로 name을 기준으로 정렬하도록 Student1 클래스에는 compareTo 메소드를 오버라이딩</span>
+">기본적으로 name을 기준으로 정렬하도록 Student1 클래스에는 compareTo 메소드를 오버라이딩.</span>
 - <span
 style=" 
 font-size: 10pt;
