@@ -12,42 +12,40 @@
 
  ```javascript
 $(document).ready(function () {
-            $("#check-email").unbind("click").click(function (e) {
-                e.preventDefault();
-                fn_emailCheck();
+    $("#check-email").unbind("click").click(function (e) {
+        e.preventDefault();
+        fn_emailCheck();
+    });
+});
 
-            });
-        });
+function fn_emailCheck() {
+    var email = $('#email').val();
+    var userData = {'email': email}
+    var jsonData = JSON.stringify(userData);
 
-        function fn_emailCheck() {
-            var email =$('#email').val();
-            var userData = {'email' : email}
-            var jsonData = JSON.stringify( userData );
-
-            if(email<1){
-                document.getElementById('checkemail').innerHTML = 'email을 입력해주세요!';
-            }else {
-                $.ajax({
-                    type : 'post',
-                    url : '/api/emailCheck',
-                    data : jsonData,
-                    contentType: "application/json",
-                    error : function (err) {
-                        console.log(err.toString());
-                        alert("서버가 응답하지 않습니다. \n 다시 시도해주시기 바랍니다.");
-
-                    },
-                    success : function (data) {
-                        if(data==0){
-                            $('#email').attr('disabled', true);
-                            document.getElementById('checkemail').innerHTML = '사용가능한 email 입니다!';
-                        }else if(data==1){
-                            document.getElementById('checkemail').innerHTML = '이미 존재하는 email 입니다. 다른 email을 사용해주세요!';
-                        }else{
-                            alert("에러가 발생했습니다!");
-                        }
-                    }
-                });
+    if (email < 1) {
+        document.getElementById('checkemail').innerHTML = 'email을 입력해주세요!';
+    } else {
+        $.ajax({
+            type: 'post',
+            url: '/api/emailCheck',
+            data: jsonData,
+            contentType: "application/json",
+            error: function (err) {
+                console.log(err.toString());
+                alert("서버가 응답하지 않습니다. \n 다시 시도해주시기 바랍니다.");
+            },
+            success: function (data) {
+                if (data == 0) {
+                    $('#email').attr('disabled', true);
+                    document.getElementById('checkemail').innerHTML = '사용가능한 email 입니다!';
+                } else if (data == 1) {
+                    document.getElementById('checkemail').innerHTML = '이미 존재하는 email 입니다. 다른 email을 사용해주세요!';
+                } else {
+                    alert("에러가 발생했습니다!");
+                }
             }
-        }
+        });
+    }
+}
 ```
