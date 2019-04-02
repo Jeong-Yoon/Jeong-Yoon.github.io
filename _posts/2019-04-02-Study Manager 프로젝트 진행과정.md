@@ -10,7 +10,7 @@
     * 중복된 email이 있으면 1, 없으면 0을 리턴한다.
     * 0이 리턴 되었을 때, email입력창을 disabled로 하여 더이상 입력받지 못하도록 처리한다.  
 
- ```java
+ ```javascript
 $(document).ready(function () {
             $("#check-email").unbind("click").click(function (e) {
                 e.preventDefault();
