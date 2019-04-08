@@ -6,13 +6,14 @@
 - ajax에서 csrf 인증값 넘기는 방법
     * html 태그 head 부분에 <meta>로 csrf token과 csrf header를 넣어준다.
     * ajax 전에 var로 값을 넣어준 다음, beforeSend를 이용하여 request헤더에 csrf header와 token 값을 넣어주도록 한다.
+    <br>
     * html head부분
     
     ```html
     <meta name="_csrf" th:content="${_csrf.token}"/>
     <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
     ```
-    
+    <br>
     * ajax부분
     
     ```javascript
@@ -49,7 +50,7 @@
         }
     }           
     ```
-
+<br>
 - 값을 넣는 데 자꾸 csrf값이 넘어가지 않아 원인을 한참 찾아본 결과,
   thymeleaf로 view 페이지를 만들었는데 html값으로 넘기려고 해서 생긴 문제였다.
   content앞에 th:를 붙여주니 제대로 동작했다.
