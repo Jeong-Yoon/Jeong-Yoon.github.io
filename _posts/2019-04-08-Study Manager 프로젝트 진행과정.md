@@ -14,6 +14,7 @@
     ```
     
     * ajax부분
+    
     ```javascript
     var token = $("meta[name='_csrf']").attr("content");
     var header = $("meta[name='_csrf_header']").attr("content");
@@ -46,8 +47,7 @@
                 return false;
             }
         }
-    }
-            
+    }           
     ```
 
 - 값을 넣는 데 자꾸 csrf값이 넘어가지 않아 원인을 한참 찾아본 결과,
