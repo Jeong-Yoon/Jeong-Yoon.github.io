@@ -11,6 +11,7 @@
     <meta name="_csrf" th:content="${_csrf.token}"/>
     <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
     ```
+    
     * ajax부분
     ```javascript
     var token = $("meta[name='_csrf']").attr("content");
