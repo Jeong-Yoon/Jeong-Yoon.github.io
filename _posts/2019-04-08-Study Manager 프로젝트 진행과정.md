@@ -5,13 +5,15 @@
 - 단순 html form 태그로 값을 넘길 때는 hidden 값으로 csrf 값을 넣어 보내주면 되지만 ajax를 사용하는 경우는 다르다.
 - ajax에서 csrf 인증값 넘기는 방법
     * html 태그 head 부분에 <meta>로 csrf token과 csrf header를 넣어준다.
-    * ajax 전에 var로 값을 넣어준 다음, beforeSend를 이용하여 request헤더에 csrf header와 token 값을 넣어주도록 한다.
-    <br>
+    * ajax 전에 var로 값을 넣어준 다음, beforeSend를 이용하여 request헤더에 csrf header와 token 값을 넣어주도록 한다.<br><br>
+    
     * html head부분
+    
     ```html
     <meta name="_csrf" th:content="${_csrf.token}"/>
     <meta name="_csrf_header" th:content="${_csrf.headerName}"/>
     ```
+    
     * ajax부분
     
     ```javascript
