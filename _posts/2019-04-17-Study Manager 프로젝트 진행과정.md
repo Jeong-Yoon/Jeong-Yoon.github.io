@@ -3,7 +3,8 @@
 ### security user 수정
 - 로그인을 할 때, email로 로그인을 해주기 때문에 UserDetailService에 id를 넣어주는 코드를 추가했다.
     * study list 페이지에서 login한 user의 user_id로 스터디를 불러와야 하는데 값이 전혀 들어오지 않았다. 확인해보니 user_id가 null로 되어 있었다.
-    * 이전 프로젝트에서는 user_id가 없이 그냥 id를 따로 만들었기 때문에 set을 해주지 않아도 됐지만 지금은 email로 로그인을 하고 user_id는 따로 있기 때문에 set을 해주어야 불러올 수 있었다.\
+    * 이전 프로젝트에서는 user_id가 없이 그냥 id를 따로 만들었기 때문에 set을 해주지 않아도 됐지만 지금은 email로 로그인을 하고 user_id는 따로 있기 때문에 set을 해주어야 불러올 수 있었다.
+
 ```java
 studyManagerSecurityUser.setId(user.getUserId());
 ```
