@@ -24,7 +24,6 @@ studyManagerSecurityUser.setId(user.getUserId());
     UPDATE studymanager.study SET code = '-' WHERE study_id = 1;
     ...
     ALTER TABLE study ADD CONSTRAINT code_UNIQUE UNIQUE(code);
-
     ```
 
 ### login 시 index 페이지 접근 불가 설정
