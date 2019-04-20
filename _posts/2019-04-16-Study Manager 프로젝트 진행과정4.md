@@ -1,4 +1,4 @@
-# 2019.04.16 Study Manager 프로젝트 진행과정
+# 2019.04.16 Study Manager 프로젝트 진행과정4
 
 ### join 실행 시 방식 수정
 - Restlet으로 테스트를 하기 위해서 JoinFormDto를 @RequestBody로 받아 오도록 수정했는데, UserController가 RestController로 설정되어 있지 않고 데이터를 json 형식으로 넘기는 것이 아니라 form 그대로 넘기게 되어있기 때문에 가입이 되지 않는 문제가 발생하였다.
