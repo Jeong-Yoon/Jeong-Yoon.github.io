@@ -1,4 +1,4 @@
-# 2019.04.08 StudyManager 프로젝트 진행과정
+# 2019.04.08 StudyManager 프로젝트 진행과정2
 
 ### csrf issue
 - Spring Security에서는 http 요청을 할 때, post 방식을 사용하면 csrf 인증을 사용한다.
