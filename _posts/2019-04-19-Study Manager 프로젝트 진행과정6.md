@@ -1,4 +1,4 @@
-# 2019.04.19 Study Manager 프로젝트 진행과정
+# 2019.04.19 Study Manager 프로젝트 진행과정6
 
 ### Study Detail 페이지
 - study list 페이지에서 제목을 눌러서 study detail로 이동할 수 있도록 함.
