@@ -1,4 +1,4 @@
-# 2019.04.17 Study Manager 프로젝트 진행과정
+# 2019.04.17 Study Manager 프로젝트 진행과정5
 
 ### security user 수정
 - 로그인을 할 때, email로 로그인을 해주기 때문에 UserDetailService에 id를 넣어주는 코드를 추가했다.
