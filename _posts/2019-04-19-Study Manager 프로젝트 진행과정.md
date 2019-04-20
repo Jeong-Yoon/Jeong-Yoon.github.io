@@ -3,12 +3,6 @@
 ### Study Detail 페이지
 - study list 페이지에서 제목을 눌러서 study detail로 이동할 수 있도록 함.
 
-```javascript
-        function gotoDetail(studyId) {
-            location.href = "/study/studyDetail/" + studyId;
-        }
-        ...
-```
 ```html
         <a th:href="'/study/studyDetail/'+${study.studyId}" th:text="${study.studyName}">
               
