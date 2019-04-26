@@ -16,19 +16,19 @@
 ### study content 내용 불러오기
 - studyDetail 화면에서 curriculumDetail에 onclick 기능을 추가하여 누르면 curriculumDetailId를 가지고 가서 연결된 study content 내용을 불러오는 화면을 만들었다.
 
-```javascript
- var curriculumDetailDiv = $('<li style="margin-left: 5%;">' + data[i].curriculumDetailContent + '</li>');
+    ```javascript
+    var curriculumDetailDiv = $('<li style="margin-left: 5%;">' + data[i].curriculumDetailContent + '</li>');
     
     ->
 
- var curriculumDetailDiv = $('<li style="margin-left: 5%;" onclick="gotoContent('+ data[i].curriculumDetailId +')">' + data[i].curriculumDetailContent + '</li>');
+    var curriculumDetailDiv = $('<li style="margin-left: 5%;" onclick="gotoContent('+ data[i].curriculumDetailId +')">' +  data[i].curriculumDetailContent + '</li>');
  
-...
+    ...
 
-function gotoContent(curriculumDetailId) {
-    location.href='/studyContent?curriculumDetailId='+curriculumDetailId;
-}
+    function gotoContent(curriculumDetailId) {
+        location.href='/studyContent?curriculumDetailId='+curriculumDetailId;
+    }
 
-```
+    ```
 - 아직 curriculumDetailContent와 curriculumContent를 가져가는 코드는 완성하지 못했다.
 
