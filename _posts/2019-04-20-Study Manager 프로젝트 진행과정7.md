@@ -1,4 +1,4 @@
-# 2019.04.20 Study Manager 프로젝트 진행과정
+# 2019.04.20 Study Manager 프로젝트 진행과정7
 
 ### curriculum_detail 불러오기
 - curriculum을 눌렀을 때, 밑에 curriculum_detail 내용을 뜨도록 했다.
