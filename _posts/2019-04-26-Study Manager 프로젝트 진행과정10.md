@@ -6,8 +6,8 @@
 - javascript안에 있는 값들은 input hidden으로 해서 id 설정을 해서 값을 
 - 방법을 찾아보니 function에 form을 만들어서 넘길 수 있었다.
 
-```javascript
-function gotoContent() {
+    ```javascript
+    function gotoContent() {
     var curriculumDetailContent = $('#curriculumDetailContent').val();
     var curriculumDetailId = $("#curriculumDetailId").val();
     var curriculumContent = $("input[name=curriculumContent]").val();
@@ -37,7 +37,7 @@ function gotoContent() {
 
     document.body.appendChild(form);
     form.submit();
-}
-```
+    }
+    ```
 
     * 다른 값들은 또다른 script에서 값을 가져오기 때문에 그냥 name값으로 불러올 수 있었지만 curriculumContent는 script 밖 form에 있는 값이기 때문에 input으로 해서 값을 불러와야 했다.
