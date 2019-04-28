@@ -8,36 +8,36 @@
 
     ```javascript
     function gotoContent() {
-    var curriculumDetailContent = $('#curriculumDetailContent').val();
-    var curriculumDetailId = $("#curriculumDetailId").val();
-    var curriculumContent = $("input[name=curriculumContent]").val();
+        var curriculumDetailContent = $('#curriculumDetailContent').val();
+        var curriculumDetailId = $("#curriculumDetailId").val();
+        var curriculumContent = $("input[name=curriculumContent]").val();
 
-    var form = document.createElement("form");
-    form.setAttribute("charset", "UTF-8");
-    form.setAttribute("method", "Post"); // Get 또는 Post 입력
-    form.setAttribute("action", "/studyContent");
-
-    var hiddenField = document.createElement("input");
-    hiddenField.setAttribute("type", "hidden");
-    hiddenField.setAttribute("name", "curriculumDetailId");
-    hiddenField.setAttribute("value", curriculumDetailId);
-    form.appendChild(hiddenField);
-
-    hiddenField = document.createElement("input");
-    hiddenField.setAttribute("type", "hidden");
-    hiddenField.setAttribute("name", "curriculumDetailContent");
-    hiddenField.setAttribute("value", curriculumDetailContent);
-    form.appendChild(hiddenField);
-
-    hiddenField = document.createElement("input");
-    hiddenField.setAttribute("type", "hidden");
-    hiddenField.setAttribute("name", "curriculumContent");
-    hiddenField.setAttribute("value", curriculumContent);
-    form.appendChild(hiddenField);
-
-    document.body.appendChild(form);
-    form.submit();
-    }
+        var form = document.createElement("form");
+        form.setAttribute("charset", "UTF-8");
+        form.setAttribute("method", "Post"); // Get 또는 Post 입력
+        form.setAttribute("action", "/studyContent");
+    
+        var hiddenField = document.createElement("input");
+        hiddenField.setAttribute("type", "hidden");
+        hiddenField.setAttribute("name", "curriculumDetailId");
+        hiddenField.setAttribute("value", curriculumDetailId);
+        form.appendChild(hiddenField);
+    
+        hiddenField = document.createElement("input");
+        hiddenField.setAttribute("type", "hidden");
+        hiddenField.setAttribute("name", "curriculumDetailContent");
+        hiddenField.setAttribute("value", curriculumDetailContent);
+        form.appendChild(hiddenField);
+    
+        hiddenField = document.createElement("input");
+        hiddenField.setAttribute("type", "hidden");
+        hiddenField.setAttribute("name", "curriculumContent");
+        hiddenField.setAttribute("value", curriculumContent);
+        form.appendChild(hiddenField);
+    
+        document.body.appendChild(form);
+        form.submit();
+        }
     ```
 
     * 다른 값들은 또다른 script에서 값을 가져오기 때문에 그냥 name값으로 불러올 수 있었지만 curriculumContent는 script 밖 form에 있는 값이기 때문에 input으로 해서 값을 불러와야 했다.
