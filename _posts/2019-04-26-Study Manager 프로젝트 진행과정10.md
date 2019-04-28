@@ -37,7 +37,7 @@
     
         document.body.appendChild(form);
         form.submit();
-        }
+    }
     ```
 
     * 다른 값들은 또다른 script에서 값을 가져오기 때문에 그냥 name값으로 불러올 수 있었지만 curriculumContent는 script 밖 form에 있는 값이기 때문에 input으로 해서 값을 불러와야 했다.
