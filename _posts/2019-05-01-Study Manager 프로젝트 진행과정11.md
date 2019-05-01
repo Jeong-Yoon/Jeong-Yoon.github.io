@@ -12,50 +12,50 @@
     * 내용을 저장하는 curriculumDetailDiv가 empty 일때만 ajax를 실행할 수 있도록 했다.
 - 내용을 나타낼 때는 show()를 숨길때는 hide()를 사용했다.
 
-```javascript
-function curriculumDetail(curriculumId) {
-
-    var token = $("meta[name='_csrf']").attr("content");
-    var header = $("meta[name='_csrf_header']").attr("content");
-
-    var JSONObject = {'curriculumId': curriculumId};
-    var jsonData = JSON.stringify(JSONObject);
-    var curriculumDetailDiv = "";
-
-    if (document.getElementById("myDIV2"+curriculumId).style.display == 'none') {
-        document.getElementById("myDIV"+curriculumId).style.display = 'none';
-        document.getElementById("myDIV2"+curriculumId).style.display = 'block';
-        if ($('#curriculumDetails' + curriculumId).empty()) {
-            $.ajax({
-                url: '/api/curriculumDetail',
-                method: 'post',
-                data: jsonData,
-                async: false,
-                contentType: "application/json",
-                beforeSend: function( xhr ) {
-                    xhr.setRequestHeader(header, token);
-                },
-                success: function (data) {
-                    for (var i = 0; i < data.length; i++) {
-                        curriculumDetailDiv = $('<li style="margin-left: 5%; margin-bottom:1%;" onclick="gotoContent('+ curriculumId +','+data[i].curriculumDetailId+')" value="' + data[i].curriculumDetailContent + '">' + data[i].curriculumDetailContent + '</li> ' +
+   ```javascript
+   function curriculumDetail(curriculumId) {
+   
+      var token = $("meta[name='_csrf']").attr("content");
+      var header = $("meta[name='_csrf_header']").attr("content");
+   
+      var JSONObject = {'curriculumId': curriculumId};
+      var jsonData = JSON.stringify(JSONObject);
+      var curriculumDetailDiv = "";
+   
+      if (document.getElementById("myDIV2"+curriculumId).style.display == 'none') {
+         document.getElementById("myDIV"+curriculumId).style.display = 'none';
+         document.getElementById("myDIV2"+curriculumId).style.display = 'block';
+         if ($('#curriculumDetails' + curriculumId).empty()) {
+               $.ajax({
+                  url: '/api/curriculumDetail',
+                  method: 'post',
+                  data: jsonData,
+                  async: false,
+                  contentType: "application/json",
+                  beforeSend: function( xhr ) {
+                     xhr.setRequestHeader(header, token);
+                  },
+                  success: function (data) {
+                     for (var i = 0; i < data.length; i++) {
+                           curriculumDetailDiv = $('<li style="margin-left: 5%; margin-bottom:1%;" onclick="gotoContent('+ curriculumId +','+data[i].curriculumDetailId+')" value="' + data[i].curriculumDetailContent + '">' + data[i].curriculumDetailContent + '</li> ' +
                             '<input type="hidden" id="curriculumDetailContent'+data[i].curriculumDetailId+'" value="' + data[i].curriculumDetailContent + '"/>' +
                             '<input type="hidden" id="curriculumDetailId'+data[i].curriculumDetailId+'" value="' + data[i].curriculumDetailId + '"/>');
-                        curriculumDetailDiv.appendTo($('#curriculumDetails' + curriculumId));
-                    }
-                },
-                error: function (err) {
-                    console.log(err.toString());
-                }
-            });
-        }
-        $('#curriculumDetails' + curriculumId).show();
-    } else {
-        document.getElementById("myDIV"+curriculumId).style.display = 'block';
-        document.getElementById("myDIV2"+curriculumId).style.display = 'none'
-        $('#curriculumDetails' + curriculumId).hide();
-    }
-}
-```
+                           curriculumDetailDiv.appendTo($('#curriculumDetails' + curriculumId));
+                     }
+                  },
+                  error: function (err) {
+                     console.log(err.toString());
+                  }
+               });
+         }
+         $('#curriculumDetails' + curriculumId).show();
+      } else {
+         document.getElementById("myDIV"+curriculumId).style.display = 'block';
+         document.getElementById("myDIV2"+curriculumId).style.display = 'none'
+         $('#curriculumDetails' + curriculumId).hide();
+      }
+   }
+   ```
 
 ### Study content 화면으로 내용 보내기, Study detail 화면으로 돌아가기
 - Study content 화면으로 내용을 보낼 때, 각 Curriculum의 맨 처음 Curriculum detail만 데이터가 전송되는 문제가 있었다. 
@@ -71,7 +71,9 @@ function curriculumDetail(curriculumId) {
 
     }
     ```
+    
 - Study content 화면에서 Study Detail 화면으로 돌아가도록 history를 이용하였다.
+
 ```javascript
 function gotolist() {
     history.go(-1);
