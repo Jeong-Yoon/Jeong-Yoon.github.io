@@ -74,8 +74,8 @@
     
 - Study content 화면에서 Study Detail 화면으로 돌아가도록 history를 이용하였다.
 
-```javascript
-function gotolist() {
-    history.go(-1);
-}
-```
+   ```javascript
+   function gotolist() {
+      history.go(-1);
+   }
+   ```
