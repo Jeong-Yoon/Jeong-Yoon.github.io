@@ -17,8 +17,7 @@
     </nav>
     ``` 
     
-    <h4>controller</<h4>
-   
+    <h4>controller</h4>
     ```java
     @GetMapping("/list/{categoryId}")
     public String getStudiesByCategoryId(@PathVariable Long categoryId, Model model){
@@ -30,8 +29,7 @@
     }
     ```
 
-    <h4>service</h4>
-    
+    <h4>service</h4>    
     ```java
     @Transactional(readOnly = true)
     public List<Study> getStudiesByUserIdAndCategoryId(Long userId, Long categoryId) {
@@ -40,7 +38,6 @@
     ```
 
     <h4>repostory</h4>
-    
     ```java
     @Query("SELECT s FROM Study s INNER JOIN s.studyUsers su INNER JOIN su.studyUserId sui INNER JOIN sui.user u INNER JOIN s.category c " +
             "WHERE u.userId =:userId AND c.categoryId =:categoryId")
