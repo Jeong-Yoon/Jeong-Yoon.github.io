@@ -37,7 +37,7 @@
 
     #### repostory
     ```java
-    @ Query("SELECT s FROM Study s INNER JOIN s.studyUsers su INNER JOIN su.studyUserId sui INNER JOIN sui.user u INNER JOIN s.category c " +
+    @Query("SELECT s FROM Study s INNER JOIN s.studyUsers su INNER JOIN su.studyUserId sui INNER JOIN sui.user u INNER JOIN s.category c " +
             "WHERE u.userId =:userId AND c.categoryId =:categoryId")
     public List<Study> getStudiesByUserIdCategoryId(@Param("userId") Long userId, @Param("categoryId") Long categoryId);
     ```
