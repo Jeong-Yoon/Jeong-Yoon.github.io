@@ -5,7 +5,8 @@
     * category를 눌렀을 때와 누르지 않았을 때를 나누어 링크를 설정하였다.
     * category를 누르면 category id를 pathvalue로 가지고 가서 user id와 함께 service로 넘겨서 repository를 통해 study를 가져오도록 했다.
 
-    #### view
+    <h4> view </h4>
+    
     ```html
     <nav class="categorymenu">
         <ul>
@@ -15,7 +16,8 @@
         </ul>
     </nav>
     ``` 
-    #### controller
+    <h4>controller</<h4>
+   
     ```java
     @GetMapping("/list/{categoryId}")
     public String getStudiesByCategoryId(@PathVariable Long categoryId, Model model){
@@ -27,7 +29,8 @@
     }
     ```
 
-    #### service
+    <h4> service </h4>
+    
     ```java
     @Transactional(readOnly = true)
     public List<Study> getStudiesByUserIdAndCategoryId(Long userId, Long categoryId) {
@@ -35,7 +38,8 @@
     }
     ```
 
-    #### repostory
+    <h4> repostory</h4>
+    
     ```java
     @Query("SELECT s FROM Study s INNER JOIN s.studyUsers su INNER JOIN su.studyUserId sui INNER JOIN sui.user u INNER JOIN s.category c " +
             "WHERE u.userId =:userId AND c.categoryId =:categoryId")
