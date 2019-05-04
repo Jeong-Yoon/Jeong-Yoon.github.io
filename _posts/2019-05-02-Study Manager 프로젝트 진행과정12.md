@@ -44,4 +44,5 @@
     public List<Study> getStudiesByUserIdCategoryId(@Param("userId") Long userId, @Param("categoryId") Long categoryId);
     ```
 
+
 - main의 로고를 누르면 다시 전체 study list를 불러오도록 했다.
