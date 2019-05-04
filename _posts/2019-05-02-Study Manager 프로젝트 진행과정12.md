@@ -6,7 +6,6 @@
     * category를 누르면 category id를 pathvalue로 가지고 가서 user id와 함께 service로 넘겨서 repository를 통해 study를 가져오도록 했다.
 
     <h4>view</h4>
-    
     ```html
     <nav class="categorymenu">
         <ul>
