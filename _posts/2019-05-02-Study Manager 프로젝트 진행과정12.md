@@ -8,7 +8,7 @@
     <h4>view</h4>
     
     ```html
-     <nav class="categorymenu">
+    <nav class="categorymenu">
         <ul>
             <li th:each="category: ${categories}">
             <a th:href="'/study/list/'+${category.categoryId}" th:text="${category.categoryName}"></a>
