@@ -1,6 +1,6 @@
-자바 메모리 구조
+# 자바 메모리 구조(1)
 <img src="{{ site.baseurl }}/images/java memory.png" style="width:170px;">
-# Static
+## Static
 - 모든 Thread가 공유하는 Memory 영역
 - Method area, Class Area, Code Method 라고도 불린다.
 - Class, Interface, Method, Field, Static Field 등이 저장된다
@@ -29,7 +29,7 @@
     * final class 변수의 경우(상수로 치환되어) 상수 풀에 값 복사
 
 
-## Runtime Constant Pool
+### Runtime Constant Pool
 - static area에 포함되지만 독자적인 중요성을 띈다.
 - class 파일 constant pool 테이블에 해당하는 영역
 - 클래스와 인터페이스 상수, 메소드와 필드에 대한 모든 레퍼런스 저장
